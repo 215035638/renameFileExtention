@@ -35,15 +35,17 @@ from osgeo import gdal
 
 
 with rasterio.open(r'C:\Users\BSibiya\Desktop\LAI ESTIMATION\Image\sentinel_image2.tif') as src:
-    blue = src.read(1, masked=True)
-    green = src.read(2, masked=True)
-    red = src.read(3, masked=True)
-    Red_Edge_1 = src.read(4, masked=True)
-    Red_Edge_2 = src.read(5, masked=True)
-    Red_Edge_3 = src.read(6, masked=True)
-    nir = src.read(7, masked=True)
-    swir_1 = src.read(8, masked=True)
-    swir_2 = src.read(9, masked=True)
+    blue = src.read(1, masked=True) #B2
+    green = src.read(2, masked=True) #B3
+    red = src.read(3, masked=True) #B4
+    Red_Edge_1 = src.read(4, masked=True) #B5
+    Red_Edge_2 = src.read(5, masked=True) #B6
+    Red_Edge_3 = src.read(6, masked=True) #B7
+    nir = src.read(7, masked=True) #B8
+    swir_1 = src.read(8, masked=True) #B11
+    swir_2 = src.read(9, masked=True) #B12
+    
+'B2','B3','B4','B5','B6','B7','B8','B11','B12    
     
 np.seterr(divide='ignore', invalid='ignore')
 VI_output = '/Users/BSibiya/Desktop/LAI ESTIMATION/VI_Output/'
